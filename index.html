@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Relojes - Neumorfismo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <div class="sidebar">
+            <div class="menu-header neu-flat">MENÚ DE RELOJES</div>
+            
+            <div class="config-panel neu-flat">
+                <div class="config-title">1. Crear Nuevo Reloj</div>
+                <input type="text" id="menuClockName" class="name-input neu-inset" placeholder="Nombre (Ej. Recreo)" maxlength="20">
+                <div class="time-inputs-container">
+                    <input type="number" id="menuHour" class="time-input neu-inset" min="1" max="12">
+                    <span>:</span>
+                    <input type="number" id="menuMinute" class="time-input neu-inset" min="0" max="59">
+                    <select id="menuAmpm" class="ampm-select neu-inset">
+                        <option value="AM">AM</option>
+                        <option value="PM">PM</option>
+                    </select>
+                </div>
+                <button class="neu-btn btn-add" id="addClockBtn">+ Añadir a Pantalla</button>
+            </div>
+
+            <div class="config-panel neu-flat">
+                <div class="config-title">2. Guardar Grupo Actual</div>
+                <input type="text" id="menuSetName" class="name-input neu-inset" placeholder="Nombre del Grupo" maxlength="25">
+                <button class="neu-btn btn-save" id="saveSetBtn">Guardar Historial</button>
+            </div>
+
+            <button class="neu-btn btn-history" id="toggleViewBtn">Ver Mis Grupos Guardados</button>
+        </div>
+
+        <div class="main-content">
+            <h1 class="main-title" id="mainHeaderTitle">Panel de Relojes</h1>
+            
+            <div id="clocks-container">
+                </div>
+
+            <div id="history-container">
+                <div id="history-list">
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
